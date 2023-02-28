@@ -1,0 +1,584 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  position: relative;
+
+  /* min-width: 320px; */
+}
+.logo {
+  margin: 10px 20px;
+}
+main {
+  min-width: 320px;
+}
+
+/* Описание бургер меню */
+.items {
+  visibility: hidden;
+  text-align: center;
+
+  position: fixed;
+  right: 50px;
+  z-index: 1;
+
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+.nax {
+  list-style-type: none;
+  padding: 3px;
+}
+
+.nax a {
+  text-decoration: none;
+  font-weight: 600;
+  color: rgb(138, 135, 135);
+}
+
+/* При наведении на строку ховеру вылазит подчеркивание */
+/* 1.прописали элемент афтер после каждой строки и скрыли его */
+.nax::after {
+  content: "";
+
+  position: absolute;
+  left: 30px;
+  background-color: #475bf1;
+  width: 40px;
+  height: 0.5px;
+  display: none;
+}
+
+/* 2. при ховере он становится видимым и текст меняет свой цвет */
+.nax:hover::after {
+  display: block;
+}
+
+.nax a:hover {
+  color: #475bf1;
+}
+/* Бургер меню внешний вид*/
+#knopka {
+  opacity: 0;
+}
+.knopka-btn {
+  display: block;
+  position: fixed;
+  top: 35px;
+  right: 20px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.knopka-btn > span,
+.knopka-btn > span::before,
+.knopka-btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(83, 99, 219, 1);
+}
+.knopka-btn > span::after {
+  content: "";
+  top: 10px;
+}
+.knopka-btn > span::before {
+  content: "";
+  top: -10px;
+}
+/* Описываем чек формы */
+#knopka:checked ~ .knopka-btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+#knopka:checked ~ .knopka-btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#knopka:checked ~ .knopka-btn > span {
+  transform: rotate(45deg);
+}
+
+#knopka:checked ~ .items {
+  visibility: visible;
+}
+
+/* Секция 1 - Реклама пробного класса */
+
+/* 1. Описываем общий контейнер и бэкграунд - на изображение накладываем доп
+фон прозрачный при помощи overlay background-blend-mode: multiply*/
+
+.trial {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 745px;
+  padding-top: 40px;
+  background-image: linear-gradient(rgb(52, 50, 117), rgb(51, 16, 83)),
+    url("../images/bg-01.jpg");
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  width: 100%;
+}
+
+/* Описываем белый блок Триал Класс */
+.white-trial {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 390px;
+  width: 290px;
+  background-color: rgb(240, 235, 235);
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 15px;
+}
+.white-trial h1 {
+  align-self: flex-start;
+  margin-left: 5px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  color: #475bf1;
+  font-weight: 600;
+}
+
+/* Описываем ячейки ввода */
+#name,
+#tel,
+#spisok {
+  width: 250px;
+  height: 50px;
+  text-align: left;
+  padding-left: 10px;
+  background-color: rgb(207, 205, 205);
+  box-shadow: 3px 2px 2px rgb(179, 178, 178);
+  border: none;
+  border-radius: 5px;
+  color: rgb(82, 81, 81);
+}
+/* Убираем обводку ячеек при клике */
+#name,
+#tel,
+#spisok:focus {
+  outline: none;
+}
+
+/* описываем кнопку */
+.btn-1 {
+  align-self: flex-end;
+  height: 50px;
+  width: 170px;
+  background-color: rgba(83, 99, 219, 1);
+  font-weight: 600;
+  color: antiquewhite;
+  opacity: 100%;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+}
+/* Описываем Just balance и другой текст в первой секции */
+
+.just {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.just h1 {
+  color: antiquewhite;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+.just p {
+  color: antiquewhite;
+  font-family: "FREESCPT";
+  /* font-weight: 400; */
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+/* Переходим ко второй секции YOGA FEATURE PROGRAM */
+
+/* Секция 2 - YOGA FEATURE PROGRAM */
+/* 1. Описываем секцию  */
+.feature {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(white, rgb(240, 235, 235));
+}
+/* 2. Описываем заголовки побольше и поменьше - всего 2 штуки */
+.h-feature h1 {
+  margin-top: 40px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: #475bf1;
+}
+
+.h-feature p {
+  font-family: "FREESCPT";
+  font-size: 3rem;
+  color: rgb(138, 135, 135);
+}
+/*3. Переходим к Карточкам 6 штук  */
+/* 3.1. контейнер для карточек */
+.card-container {
+  display: flex;
+  flex-direction: column;
+}
+/*3.2. внутреннее содержимое карточек */
+.card-inside {
+  display: flex;
+  flex-direction: column;
+  width: calc(100%-60px);
+  margin: 1vw;
+  text-align: left;
+  color: rgb(105, 103, 103);
+  background-color: rgb(240, 235, 235);
+  box-shadow: 5px 5px 5px rgb(179, 178, 178);
+  border-radius: 10px;
+}
+
+/* 3.3.описываем заголовок карточки */
+.card-inside h2 {
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+/*3.4. центрируем текст в карточке */
+.card-inside p {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+/* 3.5.последнему Р в списке делаем более тусклый цвет */
+.card-inside p:last-of-type {
+  color: rgb(160, 156, 156);
+}
+
+/* адаптация для экранов более 570 по 2 карточки в ряду  */
+
+/* @media screen and (min-width: 570px) {
+  .card-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    border: 1px solid black;
+  }
+
+  .card-container {
+    margin: 30px;
+    width: calc(100% / 2 - 120px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card-inside {
+    flex-direction: row;
+  }
+} */
+
+/* СЕКЦИЯ 3 - Галерея с  бабами */
+/* 1.прописываем свойства контенера с картинками */
+.galery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(83, 99, 219, 1);
+}
+/* 2.Задаем ширину изображениям */
+.women {
+  display: flex;
+  max-width: 50%;
+  position: relative;
+}
+
+/* Прописываем оверлей с лупой на гражданок*/
+.women:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(51, 16, 83, 0.5);
+  opacity: 0;
+}
+
+.women:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../images/free-icon-loupe-751463.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+}
+
+.women:hover:before,
+.women:hover:after {
+  opacity: 1;
+}
+
+/* -- СЕКЦИЯ 4 - Раздел с каруселью About us */
+/* 1.описываем секцию в целом */
+.aboutus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 2.описываем заголовок и текст */
+.aboutus h1 {
+  align-self: flex-start;
+  margin-left: 5px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  color: #475bf1;
+  padding: 40px 20px 20px 20px;
+}
+
+.aboutus p {
+  padding: 0 20px;
+  color: rgb(105, 103, 103);
+}
+/* 3. рисунок карусель */
+.aboutus img {
+  min-width: 270px;
+  /* width: calc (100% - 40px); */
+  /* width: 270px; */
+  margin: 40px 20px;
+  box-shadow: 5px 5px 5px rgb(179, 178, 178);
+  border-radius: 10px;
+}
+
+/* СЕКЦИЯ 5 - Преимущества на синем фоне с иконками */
+/* 1. Описываем контейнер и оверлей бэкграунда */
+.advant-container {
+  display: flex;
+  min-width: 320px;
+
+  flex-direction: column;
+  align-items: center;
+
+  background-image: linear-gradient(rgb(89, 61, 192), rgb(59, 46, 71)),
+    url("../images/bg-02.jpg");
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  padding-top: 20px;
+}
+
+/*2. внутреннее содержимое карточек */
+.advant-conteiner-inside {
+  display: flex;
+  flex-direction: column;
+  /* min-width: 290px;
+  width: calc(100%-60px); */
+  padding: 15px;
+  text-align: center;
+  color: antiquewhite;
+}
+/* 3.описываем заголовок карточки */
+.advant-conteiner-inside h2 {
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+/*4. центрируем текст в карточке */
+.advant-conteiner-inside p {
+  /* margin-bottom: 20px; */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+/* 5 работа с изображением */
+/* 5.1 выравниваем картинку */
+.advant-border img {
+  vertical-align: middle;
+}
+/* 5.2 устанавливаем стили для рамки */
+.advant-border {
+  align-self: center;
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  border: solid antiquewhite 2px;
+  border-radius: 50%;
+}
+/* 5.3 центрируем изображения внутри дива-бордера */
+.ico-1,
+.ico-2,
+.ico-7 {
+  padding-top: 10px;
+}
+/* .ico-3 {
+  margin-bottom: 5px;
+} */
+.ico-4,
+.ico-5,
+.ico-8 {
+  padding-top: 5px;
+}
+
+/* Секция 6  с ценами */
+/* 1. описываем секцию в целом */
+.price-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../images/bg-03.jpg);
+  background-position: center;
+  background-size: cover;
+}
+/* 2. описываем карточку в отдельности */
+
+/*2.1 внутреннее содержимое карточек */
+.price-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 290px;
+  /* width: calc(100%-60px); */
+  margin: 30px;
+  /* text-align: left; */
+  color: rgb(105, 103, 103);
+  background-color: rgb(240, 235, 235);
+  box-shadow: 5px 5px 5px rgb(179, 178, 178);
+  border-radius: 10px;
+  overflow: hidden;
+}
+/* 2.2 описываем заголовок карточки */
+.price-container h2 {
+  text-align: center;
+  color: antiquewhite;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+
+  font-size: 1.3rem;
+  background-color: rgba(83, 99, 219, 1);
+}
+/* 2.3 делаем надстрочный знак доллара */
+.usa {
+  font-size: 2.5rem;
+}
+
+/*2.4. центрируем текст в карточке */
+.price-container p {
+  margin: 25px 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(105, 103, 103);
+}
+/* 2.5создаем стили для текста внутри и разделителных линий между строчками */
+.line {
+  display: block;
+  margin: 0 auto;
+  justify-content: center;
+  background-color: rgb(179, 178, 178);
+  width: 30%;
+  height: 1px;
+}
+/* 2.6 описываем кнопу Buy now */
+
+.btn-2 {
+  height: 50px;
+  width: 170px;
+  background-color: rgba(83, 99, 219, 1);
+  font-weight: 600;
+  color: antiquewhite;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  align-self: center;
+  margin-top: 10px;
+}
+/* ФУТЕР */
+.footer-1 {
+  background-color: rgba(83, 99, 219, 1);
+  color: antiquewhite;
+  padding-bottom: 100px;
+}
+/* описываю блок About */
+.container-about {
+  padding-top: 30px;
+  padding-left: 20px;
+}
+.container-about h2 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+/* описываю блок Contact-us */
+
+.container-contact-us {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  margin-top: 30px;
+  /* visibility: hidden; */
+
+  padding: 20px;
+}
+
+.container-contact-us h2 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+/* убираю подчеркивание и меняю цвет текста ссылок */
+.container-contact-us a {
+  text-decoration: none;
+  color: antiquewhite;
+  font-style: normal;
+}
+/* размещаю ебаные телефоны */
+.info-4 {
+  display: flex;
+  flex-direction: row;
+}
+.tel-map,
+.mail-web {
+  width: 50%;
+}
+.bred {
+  height: 60px;
+  display: flex;
+
+  gap: 10px;
+}
+/* при маленьком размере экрана эта часть скрыта при помощи hidden */
+.footer-2 {
+  height: 60px;
+  background-color: #5363d8;
+  margin: 0 auto;
+  text-align: center;
+  color: rgb(179, 178, 178);
+  vertical-align: middle;
+}
+
+.footer-2 p {
+  visibility: hidden;
+}

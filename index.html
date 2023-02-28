@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- вставляю шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:ital,wght@0,400;1,700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <!-- вставляю таблицы стилей -->
+    <link rel="stylesheet" href="./style/fonts.css" />
+    <link rel="stylesheet" href="./style/icons.css" />
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+
+    <style>
+      /* особенные шрифты перенесла в отдельную папку*/
+    </style>
+  </head>
+  <body>
+    <!-- Шапка -->
+    <header>
+      <div><img class="logo" src="./logo.png" alt="logo" /></div>
+
+      <nav class="check-box">
+        <input type="checkbox" name="#" id="knopka" />
+        <label class="knopka-btn" for="knopka"><span></span></label>
+        <ul class="items">
+          <li class="nax"><a href="#">About us</a></li>
+          <li class="nax"><a href="#">Reservation</a></li>
+          <li class="nax"><a href="#">Gallery</a></li>
+          <li class="nax"><a href="#">Blog</a></li>
+          <li class="nax"><a href="#">Elements</a></li>
+          <li class="nax"><a href="#">Shop</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Секция 1 - Реклама пробного класса -->
+      <section class="trial">
+        <div>
+          <!-- Форма ввода данных -->
+          <form class="white-trial">
+            <h1>trial class</h1>
+            <p class="forma-1">
+              <input type="text" id="name" placeholder="Enter your name" />
+            </p>
+            <p class="forma-1">
+              <input type="tel" id="tel" placeholder="Enter your phone" />
+            </p>
+            <p class="forma-1">
+              <select name="spisok" id="spisok">
+                <option value="Choose">Choose your class</option>
+                <option value="Morning">Morning</option>
+                <option value="Afternoon">Afternoon</option>
+                <option value="Evening">Evening</option>
+              </select>
+            </p>
+            <button class="btn-1" type="submit">Try it</button>
+          </form>
+        </div>
+        <!-- Текст рядом или после формы -->
+        <div class="just">
+          <h1>
+            just balance <br />
+            your mind & <br />
+            body
+          </h1>
+          <p>
+            Create the healthly living <br />
+            for yourself
+          </p>
+        </div>
+      </section>
+
+      <!-- СЕКЦИЯ 2 - секция с преимуществами YOGA FEATURE PROGRAM -->
+      <section class="feature">
+        <div class="h-feature">
+          <h1>
+            yoga feature <br />
+            programm
+          </h1>
+          <p>Our classes</p>
+        </div>
+        <!-- Карточки 4 штук -->
+        <div class="card-main">
+        <div class="card-container">
+          <div class="card-inside">
+            <img src="./images/img-01.jpg" alt="#" />
+            <div>
+              <h2>yoga for health</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
+                doloremque reiciendis expedita voluptas, error dicta. Rerum,
+                laborum iure error natus, saepe placeat, debitis eum fuga
+                eligendi labore eveniet quaerat nisi.
+              </p>
+              <p>Astanga-Hatha</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-inside">
+            <img src="./images/img-02.jpg" alt="#" />
+            <div>
+              <h2>yoga for health</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
+                doloremque reiciendis expedita voluptas, error dicta. Rerum,
+                laborum iure error natus, saepe placeat, debitis eum fuga
+                eligendi labore eveniet quaerat nisi.
+              </p>
+              <p>Astanga-Hatha</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-inside">
+            <img src="./images/img-03.jpg" alt="#" />
+
+            <div>
+              <h2>yoga for health</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
+                doloremque reiciendis expedita voluptas, error dicta. Rerum,
+                laborum iure error natus, saepe placeat, debitis eum fuga
+                eligendi labore eveniet quaerat nisi.
+              </p>
+              <p>Astanga-Hatha</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-inside">
+            <img src="./images/img-04.jpg" alt="#" />
+            <div>
+              <h2>yoga for health</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
+                doloremque reiciendis expedita voluptas, error dicta. Rerum,
+                laborum iure error natus, saepe placeat, debitis eum fuga
+                eligendi labore eveniet quaerat nisi.
+              </p>
+              <p>Astanga-Hatha</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+      <!-- СЕКЦИЯ 3 - Галерея с  бабами -->
+      <!-- <section class="galery">
+
+        
+
+       <a class="women" href="#"><img src="./images/img-05.jpg" alt="#" /></a>
+        <a class="women" href="#"><img src="./images/img-06.jpg" alt="#" /></a>
+        <a class="women" href=""><img src="./images/img-07.jpg" alt="#" /></a>
+        <a class="women" href=""><img src="./images/img-08.jpg" alt="#" /></a>
+        <a class="women" href=""><img src="./images/img-09.jpg" alt="#" /></a>
+        <a class="women" href=""><img src="./images/img-10.jpg" alt="#" /></a>
+        <a class="women" href=""><img src="./images/img-11.jpg" alt="#" /></a>
+        <a class="women" href=""><img src="./images/img-12.jpg" alt="#" /></a>    
+        
+        
+      </section> -->
+
+      <!-- СЕКЦИЯ 4 - Раздел с каруселью About us -->
+      <!-- <section class="aboutus">
+        <div>
+          <h1>about us</h1>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
+            error officia deleniti earum fugiat porro possimus ipsum ut. Facere
+            neque ipsum harum molestiae alias quae voluptas totam beatae officia
+            consequuntur.
+          </p>
+        </div>
+        <div>
+          <img src="./images/img-13.jpg" alt="#" />
+        </div>
+      </section> -->
+
+      <!-- СЕКЦИЯ 5 - Преимущества на синем фоне с иконками 8 иконок -->
+      <!-- общий контейнер для всего -->
+      <section class="advant-container">
+            <!-- карточка-контейнер -->        
+          <div class="advant-conteiner-inside">
+            <!-- див обертка для картинки -->
+          <div class="advant-border"><img class="ico-1" src="./images/ico-01.png" alt="#" /></div>
+          <!-- див обертка для текста -->
+          <div>
+            <h2>impruved overal <br> health</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A
+              molestiae magnam sed odio tenetur unde minima
+            </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- карточка-контейнер 2-->        
+          <div class="advant-conteiner-inside">
+            <!-- див обертка для картинки -->
+          <div class="advant-border"><img class="ico-2" src="./images/ico-02.png" alt="#" /></div>
+          <!-- див обертка для текста -->
+          <div>
+            <h2>increased <br> concentration</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A
+              molestiae magnam sed odio tenetur unde minima
+            </p>
+            </div>
+          </div>
+        </div>
+        <!-- карточка-контейнер 3-->        
+          <div class="advant-conteiner-inside">
+            <!-- див обертка для картинки -->
+          <div class="advant-border"><img class="ico-3" src="./images/ico-03.png" alt="#" /></div>
+          <!-- див обертка для текста -->
+          <div>
+            <h2>blance <br> youp mind</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A
+              molestiae magnam sed odio tenetur unde minima
+            </p>
+            </div>
+          </div>
+        </div>
+        <!-- карточка-контейнер 4-->        
+          <div class="advant-conteiner-inside">
+            <!-- див обертка для картинки -->
+          <div class="advant-border"><img class="ico-4" src="./images/ico-04.png" alt="#" /></div>
+          <!-- див обертка для текста -->
+          <div>
+            <h2>sleep <br> better</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A
+              molestiae magnam sed odio tenetur unde minima
+            </p>
+            </div>
+          </div>
+        </div>
+        <!-- карточка-контейнер 5-->        
+          <div class="advant-conteiner-inside">
+            <!-- див обертка для картинки -->
+          <div class="advant-border"><img class="ico-5" src="./images/ico-05.png" alt="#" /></div>
+          <!-- див обертка для текста -->
+          <div>
+            <h2>weight <br> loss</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A
+              molestiae magnam sed odio tenetur unde minima
+            </p>
+            </div>
+          </div>
+        </div>
+        <!-- карточка-контейнер 6-->        
+          <div class="advant-conteiner-inside">
+            <!-- див обертка для картинки -->
+          <div class="advant-border"><img src="./images/ico-06.png" alt="#" /></div>
+          <!-- див обертка для текста -->
+          <div>
+            <h2>strengthens <br> your bones</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A
+              molestiae magnam sed odio tenetur unde minima
+            </p>
+            </div>
+          </div>
+        </div>
+        <!-- карточка-контейнер 7-->        
+          <div class="advant-conteiner-inside">
+            <!-- див обертка для картинки -->
+          <div class="advant-border"><img class="ico-7" src="./images/ico-07.png" alt="#" /></div>
+          <!-- див обертка для текста -->
+          <div>
+            <h2>increased <br> flexcibility</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A
+              molestiae magnam sed odio tenetur unde minima
+            </p>
+            </div>
+          </div>
+        </div>
+        <!-- карточка-контейнер 8-->        
+          <div class="advant-conteiner-inside">
+            <!-- див обертка для картинки -->
+          <div class="advant-border"><img class="ico-8" src="./images/ico-08.png" alt="#" /></div>
+          <!-- див обертка для текста -->
+          <div>
+            <h2>lower blood <br> pressure</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A
+              molestiae magnam sed odio tenetur unde minima
+            </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Секция 6  с ценами -->
+
+      <!-- секция с карточками -->
+      <section class="price-section">
+        <!-- карточка-контейнер 1 -->
+        <div class="price-container">
+          <!-- див с ценой -->
+          <div> <h2><sup>$</sup> <span class="usa">49</span> / month</h2></div>
+          <!-- див с расписанием -->
+          <div>
+            <p>entry date: mon - fri</p>
+            <span class="line"></span>
+            <p>entry time: 8 a.m. - 8 p.m.</p>
+            <span class="line"></span>
+            <p>nutririon advizer: no</p>
+          </div>
+          <!-- кнопка -->
+          <div><button class="btn-2" type="submit">By now</button></div>
+        </div>
+<!-- карточка-контейнер 2 -->
+        <div class="price-container">
+          <!-- див с ценой -->
+          <div> <h2><sup>$</sup> <span class="usa">69</span> / month</h2></div>
+          <!-- див с расписанием -->
+          <div>
+            <p>entry date: mon - fri</p>
+            <span class="line"></span>
+            <p>entry time: 8 a.m. - 8 p.m.</p>
+            <span class="line"></span>
+            <p>nutririon advizer: yes</p>
+          </div>
+          <!-- кнопка -->
+          <div><button class="btn-2" type="submit">By now</button></div>
+        </div>
+        <!-- карточка-контейнер 3 -->
+        <div class="price-container">
+          <!-- див с ценой -->
+          <div> <h2><sup>$</sup> <span class="usa">99</span> / month</h2></div>
+          <!-- див с расписанием -->
+          <div>
+            <p>entry date: mon - sun</p>
+            <span class="line"></span>
+            <p>entry time: 8 a.m. - 8 p.m.</p>
+            <span class="line"></span>
+            <p>nutririon advizer: yes</p>
+          </div>
+          <!-- кнопка -->
+          <div ><button class="btn-2" type="submit">By now</button></div>
+        </div>
+
+        
+      </section>
+    </main>
+
+    
+    <footer>
+       <!-- Сеция внизу общая для ABOUT и CONTACT US и значки -->
+
+        <section class="footer-1">
+
+          <!-- в ней контейнер about ас -->
+
+          <div class="container-about">
+            <h2>about</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium reprehenderit blanditiis possimus deserunt officia ea  </p>
+          </div>
+
+          <!-- контейнер с контактными данными -->
+          <div class="container-contact-us">
+            <!-- Заголовок -->
+            <h2>contact us</h2>
+            <!-- контейнер для 4 ячеек с данными -->
+            <div class="info-4">
+              <div class="tel-map">
+                  <!-- адрес -->
+                <div class="bred"> 
+                  <span class="icon-location2"></span>
+                  <div><a href="#">05419 Jisef Mountains<br> Apt 716</a></div>
+                </div>
+                <!-- телефон -->
+                <div class="bred">
+                  <span class="icon-phone"></span>
+                  <div><span><a href=”tel:+1-234-567-89”>+1 234 567 89</a> </span> <br>
+                  <span><a href=”tel:+1-234-648-90”>+1 234 648 90</a></span></div>
+                </div>
+
+              </div>
+
+                <div class="mail-web">
+                  <!-- эл почта -->
+                <div class="bred">
+                  <span class="icon-envelop"></span>
+                  <address><a href="mailto:joga.info@example.com">joga.info@example.com</a></address> 
+                </div>   
+                <!-- сайт -->
+                <div class="bred">
+                  <span class="icon-dribbble"></span>
+                  <a href="#">www.example.com</a>
+                </div>
+
+                </div>
+                
+            </div>
+            <!-- секция с ебнутыми значками -->
+        <div class="social">
+          <span class="icon-linkedin"></span>
+          <span class="icon-twitter"></span>
+          <span class="icon-facebook"></span>
+          <span class="icon-google-plus3"></span>
+          <span class="icon-pinterest"></span>
+        </div>
+        </div>
+        
+       
+        </section>
+      
+      
+<section class="footer-2">
+  <p>Copyright &copy; 2016-2017 Yoga class </p>
+</section>
+    </footer>
+  </body>
+</html>
